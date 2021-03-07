@@ -9,19 +9,29 @@
 /* Begin PBXBuildFile section */
 		E430207625F32B45006228BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E430207525F32B45006228BE /* AppDelegate.swift */; };
 		E430207825F32B45006228BE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E430207725F32B45006228BE /* ContentView.swift */; };
-		E430207A25F32B45006228BE /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = E430207925F32B45006228BE /* Experience.rcproject */; };
 		E430207C25F32B49006228BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E430207B25F32B49006228BE /* Assets.xcassets */; };
 		E430207F25F32B49006228BE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E430207E25F32B49006228BE /* Preview Assets.xcassets */; };
+		E430208925F32DCB006228BE /* ARDetectFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E430208825F32DCB006228BE /* ARDetectFaceView.swift */; };
+		E488C52B25F3331400DF48A3 /* MyScene.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = E430209025F3327C006228BE /* MyScene.rcproject */; };
+		E488C52F25F3390D00DF48A3 /* CommonFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E488C52E25F3390D00DF48A3 /* CommonFloat.swift */; };
+		E488C53325F3412E00DF48A3 /* CommonEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E488C53225F3412E00DF48A3 /* CommonEntity.swift */; };
+		E488C53725F4644900DF48A3 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E488C53625F4644900DF48A3 /* MenuView.swift */; };
+		E488C53C25F4CD4300DF48A3 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E488C53B25F4CD4300DF48A3 /* MenuItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E430207225F32B45006228BE /* DetectFacialexpressions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DetectFacialexpressions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E430207525F32B45006228BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E430207725F32B45006228BE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		E430207925F32B45006228BE /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		E430207B25F32B49006228BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E430207E25F32B49006228BE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E430208025F32B49006228BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E430208825F32DCB006228BE /* ARDetectFaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDetectFaceView.swift; sourceTree = "<group>"; };
+		E430209025F3327C006228BE /* MyScene.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = MyScene.rcproject; sourceTree = "<group>"; };
+		E488C52E25F3390D00DF48A3 /* CommonFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFloat.swift; sourceTree = "<group>"; };
+		E488C53225F3412E00DF48A3 /* CommonEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonEntity.swift; sourceTree = "<group>"; };
+		E488C53625F4644900DF48A3 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		E488C53B25F4CD4300DF48A3 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +64,16 @@
 		E430207425F32B45006228BE /* DetectFacialexpressions */ = {
 			isa = PBXGroup;
 			children = (
+				E488C53A25F4CD1D00DF48A3 /* Constant */,
+				E488C53525F4642200DF48A3 /* SwiftUI */,
+				E488C52D25F338FA00DF48A3 /* Common */,
+				E430208725F32D79006228BE /* ARView */,
 				E430207525F32B45006228BE /* AppDelegate.swift */,
 				E430207725F32B45006228BE /* ContentView.swift */,
-				E430207925F32B45006228BE /* Experience.rcproject */,
 				E430207B25F32B49006228BE /* Assets.xcassets */,
 				E430208025F32B49006228BE /* Info.plist */,
 				E430207D25F32B49006228BE /* Preview Content */,
+				E430209025F3327C006228BE /* MyScene.rcproject */,
 			);
 			path = DetectFacialexpressions;
 			sourceTree = "<group>";
@@ -70,6 +84,39 @@
 				E430207E25F32B49006228BE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E430208725F32D79006228BE /* ARView */ = {
+			isa = PBXGroup;
+			children = (
+				E430208825F32DCB006228BE /* ARDetectFaceView.swift */,
+			);
+			path = ARView;
+			sourceTree = "<group>";
+		};
+		E488C52D25F338FA00DF48A3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E488C52E25F3390D00DF48A3 /* CommonFloat.swift */,
+				E488C53225F3412E00DF48A3 /* CommonEntity.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E488C53525F4642200DF48A3 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				E488C53625F4644900DF48A3 /* MenuView.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		E488C53A25F4CD1D00DF48A3 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				E488C53B25F4CD4300DF48A3 /* MenuItem.swift */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +188,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E488C53725F4644900DF48A3 /* MenuView.swift in Sources */,
+				E488C52B25F3331400DF48A3 /* MyScene.rcproject in Sources */,
+				E488C53325F3412E00DF48A3 /* CommonEntity.swift in Sources */,
 				E430207825F32B45006228BE /* ContentView.swift in Sources */,
+				E488C52F25F3390D00DF48A3 /* CommonFloat.swift in Sources */,
+				E488C53C25F4CD4300DF48A3 /* MenuItem.swift in Sources */,
 				E430207625F32B45006228BE /* AppDelegate.swift in Sources */,
-				E430207A25F32B45006228BE /* Experience.rcproject in Sources */,
+				E430208925F32DCB006228BE /* ARDetectFaceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
