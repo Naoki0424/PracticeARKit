@@ -10,19 +10,20 @@ import RealityKit
 import ARKit
 
 class ARDetectFaceView: UIView {
-    // ARView
+    
+    // MARK: Properties
+    
     let arView = ARView(frame: UIScreen.main.bounds)
-    
-    // サインボード宣言
     let faceAnchor = AnchorEntity()
-    var brightFaceObject: MyScene.FaceBright!
-    var defaultFaceObject: MyScene.FaceDefault!
-    var defaultTongueObject: MyScene.Tongue!
-    var pieyonObject: MyScene.Pieyon!
-    
-//    var defaultPosition: SIMD3<Float>!
-//    var defaultScale: SIMD3<Float>!
-    
+
+    var selectedVirtualContent: MenuItem = .detectFace {
+        didSet {
+            arView.session.run(ARFaceTrackingConfiguration(), options: [.removeExistingAnchors, .resetTracking])
+        }
+    }
+    var selectedContentController: VirtualContentController {
+        return selectedVirtualContent.makeController()
+    }
     
     override init(frame frameRect: CGRect) {
         // Check if ARBodyTrackingConfiguration is supported
@@ -39,15 +40,6 @@ class ARDetectFaceView: UIView {
         // Add a ARView
         addSubview(arView)
         
-        setupFaceTracking()
-        
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func setupFaceTracking() {
         let configuration = ARFaceTrackingConfiguration()
         configuration.isLightEstimationEnabled = true
         arView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
@@ -56,52 +48,17 @@ class ARDetectFaceView: UIView {
         // Place the object when the body is detected
         arView.scene.addAnchor(faceAnchor)
         
-        // Read a 3D Object
-        brightFaceObject = try! MyScene.loadFaceBright()
-        defaultFaceObject = try! MyScene.loadFaceDefault()
-        defaultTongueObject = try! MyScene.loadTongue()
-        pieyonObject = try! MyScene.loadPieyon()
-//        defaultPosition = brightFaceObject.position
-//        defaultScale = brightFaceObject.scale
-        
     }
-
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
 
 //MARK:- Session
 
 extension ARDetectFaceView: ARSessionDelegate{
     func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
-        for anchor in anchors {
-            // Processing is interrupted.
-            // When other than ARFaceAnchor is detected.
-            guard let detectedAnchor = anchor as? ARFaceAnchor else {return}
-            
-            // Get blendShapes(BlendShapes include vatious infomation)
-            let blendShapes = detectedAnchor.blendShapes
-            
-            guard let jawOpen = blendShapes[.jawOpen] as? Float,
-                  let tongueOut = blendShapes[.tongueOut] as? Float else { return }
-
-            let jawOpenAfterTruncation = jawOpen.floorSecondDecimalPlace()
-            
-            addObject(pieyonObject)
-            
-//            if tongueOut > 0.5 {
-//                addObject(defaultTongueObject)
-//            }else if jawOpenAfterTruncation > 0.5 {
-//                addObject(brightFaceObject)
-//            }else {
-//                addObject(defaultFaceObject)
-//            }
-        }
+        selectedContentController.updateObject(session, anchors, faceAnchor)
     }
-    
-    func addObject(_ entity: Entity) {
-        faceAnchor.removeAllChildren()
-        if faceAnchor.children.count == 0 {
-            faceAnchor.addChild(entity)
-        }
-    }
-    
 }

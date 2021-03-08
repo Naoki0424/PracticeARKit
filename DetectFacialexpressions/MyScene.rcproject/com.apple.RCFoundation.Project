@@ -333,7 +333,7 @@
                           "message",
                           {
                             "typeName" : "String",
-                            "value" : "こんにちは!"
+                            "value" : "・・・・・"
                           }
                         ],
                         [
@@ -445,9 +445,9 @@
                   0.99883145093917847,
                   -0.041697096079587936,
                   0,
-                  -0.50498324632644653,
-                  0.048328667879104614,
-                  0.86177486181259155,
+                  -0.50498330593109131,
+                  0.048328675329685211,
+                  0.8617749810218811,
                   0,
                   -0.19582714140415192,
                   0.10130816698074341,
@@ -660,7 +660,7 @@
                 ]
               },
               "physicsMode" : "grid",
-              "title" : "Tongue",
+              "title" : "test",
               "viewTransform" : {
                 "cameraTransform" : [
                   0.99907124042510986,
@@ -668,8 +668,8 @@
                   -0.043088257312774658,
                   0,
                   -0.0089032640680670738,
-                  0.97841942310333252,
-                  -0.20643667876720428,
+                  0.97841948270797729,
+                  -0.20643669366836548,
                   0,
                   0.04215843603014946,
                   0.2066284716129303,
@@ -1195,6 +1195,236 @@
                   1,
                   0,
                   0,
+                  0,
+                  0,
+                  0,
+                  0.99999994039535522,
+                  0,
+                  0,
+                  -0.99999994039535522,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              }
+            }
+          ],
+          "__version" : 5
+        },
+        {
+          "__content" : [
+            {
+              "arAnchorSpecification" : {
+                "name" : "face"
+              },
+              "behaviors" : [
+
+              ],
+              "gravity" : [
+                0,
+                0,
+                9.8000001907348633
+              ],
+              "identifier" : "CF5272E9-0D2B-4C0A-B159-828A815F482C",
+              "material" : "concrete",
+              "overrides" : {
+                "children" : {
+                  "DCC6A64C-8C95-4A78-9F07-86F9C0CE00EC" : {
+                    "overrides" : {
+                      "arguments" : [
+                        [
+                          "arrowAngleOffset",
+                          {
+                            "typeName" : "Double",
+                            "value" : -17
+                          }
+                        ],
+                        [
+                          "arrowLength",
+                          {
+                            "typeName" : "Double",
+                            "value" : 0.31
+                          }
+                        ],
+                        [
+                          "arrowWidth",
+                          {
+                            "typeName" : "Double",
+                            "value" : 0.070000000000000034
+                          }
+                        ],
+                        [
+                          "bubbleMaterial",
+                          {
+                            "typeName" : "String",
+                            "value" : "plastic"
+                          }
+                        ],
+                        [
+                          "bubbleMaterialColor",
+                          {
+                            "typeName" : "double4",
+                            "value" : [
+                              0.85000002384185791,
+                              0.17000000178813934,
+                              0.85000002384185791,
+                              1
+                            ]
+                          }
+                        ],
+                        [
+                          "bubbleType",
+                          {
+                            "typeName" : "String",
+                            "value" : "speech"
+                          }
+                        ],
+                        [
+                          "cornerRoundness",
+                          {
+                            "typeName" : "Double",
+                            "value" : 1
+                          }
+                        ],
+                        [
+                          "message",
+                          {
+                            "typeName" : "String",
+                            "value" : "ベーーーー！！！"
+                          }
+                        ],
+                        [
+                          "messageFont",
+                          {
+                            "typeName" : "String",
+                            "value" : "Helvetica-Bold"
+                          }
+                        ],
+                        [
+                          "messageMaterial",
+                          {
+                            "typeName" : "String",
+                            "value" : "plastic"
+                          }
+                        ],
+                        [
+                          "messageMaterialColor",
+                          {
+                            "typeName" : "double4",
+                            "value" : [
+                              1,
+                              1,
+                              1,
+                              1
+                            ]
+                          }
+                        ],
+                        [
+                          "messageScale",
+                          {
+                            "typeName" : "Double",
+                            "value" : 0.53365432997881357
+                          }
+                        ]
+                      ],
+                      "children" : {
+                        "text_1" : {
+                          "overrides" : {
+                            "factory" : null,
+                            "runtimeAttributes" : [
+                              [
+                                "RuntimeIdentifier",
+                                {
+                                  "typeName" : "UUID",
+                                  "value" : "5347D8A8-F997-44BC-A35B-C006F0EA3304"
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      },
+                      "factory" : {
+                        "identifier" : "com.apple.rc.af.CoreAssetFactories.QuoteBubbleAssetFactory",
+                        "version" : "1.0"
+                      },
+                      "runtimeAttributes" : [
+                        [
+                          "RuntimeIdentifier",
+                          {
+                            "typeName" : "UUID",
+                            "value" : "AF83FF36-0BD5-4DCA-8BD6-1E9526011543"
+                          }
+                        ],
+                        [
+                          "entityName",
+                          {
+                            "typeName" : "String",
+                            "value" : "FaceTongue"
+                          }
+                        ]
+                      ]
+                    },
+                    "transform" : {
+                      "matrix" : [
+                        0.39400425553321838,
+                        -8.7926800063087285e-08,
+                        -4.8695120824504556e-08,
+                        0,
+                        -4.1124451399809914e-08,
+                        0.033150758594274521,
+                        -0.39260700345039368,
+                        0,
+                        9.1712109906438855e-08,
+                        0.39260700345039368,
+                        0.033150758594274521,
+                        0,
+                        0.1131407618522644,
+                        0.056294932961463928,
+                        -0.13738842308521271,
+                        1
+                      ]
+                    }
+                  }
+                },
+                "factory" : null,
+                "runtimeAttributes" : [
+                  [
+                    "isAccessibilityEnabled",
+                    {
+                      "typeName" : "Bool",
+                      "value" : false
+                    }
+                  ]
+                ]
+              },
+              "physicsMode" : "grid",
+              "title" : "FaceTongue",
+              "viewTransform" : {
+                "cameraTransform" : [
+                  0.99907124042510986,
+                  -2.5611370801925659e-09,
+                  -0.043088275939226151,
+                  0,
+                  0.002066850895062089,
+                  0.99884885549545288,
+                  0.047923214733600616,
+                  0,
+                  0.04303867369890213,
+                  -0.047967758029699326,
+                  0.9979211688041687,
+                  0,
+                  0.10972116887569427,
+                  -7.9897085925040301e-07,
+                  0.77088266611099243,
+                  1
+                ],
+                "sceneTransform" : [
+                  1,
+                  0,
+                  -0,
                   0,
                   0,
                   0,
