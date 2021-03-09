@@ -20,12 +20,14 @@ struct ContentView: View {
     @State private var closeOffset = CGFloat.zero
     @State private var openOffset = CGFloat.zero
     
+    @EnvironmentObject var menuInfo: MenuInfo
+    
     var body: some View {
         // 画面サイズの取得にGeometoryReaderを利用します
         GeometryReader { geometry in
             ZStack(alignment: .topLeading) {
                 // メインコンテンツ
-                ARViewContainer()
+                ARViewContainer(menuInfo: self.menuInfo)
                     .edgesIgnoringSafeArea(.all)
                 // スライドメニュー
                 MenuView()
@@ -71,8 +73,9 @@ struct ContentView: View {
 }
 
 struct ARViewContainer: UIViewRepresentable {
+    var menuInfo: MenuInfo
     func makeUIView(context: Context) -> ARDetectFaceView {
-        return ARDetectFaceView(frame: .zero)
+        return ARDetectFaceView(frame: .zero, menuInfo)
     }
     func updateUIView(_ uiView: ARDetectFaceView, context: Context) {}
 }

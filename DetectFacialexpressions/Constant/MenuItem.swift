@@ -35,4 +35,7 @@ protocol VirtualContentController{
     func updateObject(_ session: ARSession,_ anchors: [ARAnchor], _ parentAnchorEntity: Entity)
 }
 
+final class MenuInfo: ObservableObject {
+    @Published var menuItem: MenuItem = .detectFace
+}
 

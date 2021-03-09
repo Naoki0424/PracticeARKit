@@ -8,6 +8,7 @@
 import UIKit
 import RealityKit
 import ARKit
+import Combine
 
 class ARDetectFaceView: UIView {
     
@@ -16,8 +17,9 @@ class ARDetectFaceView: UIView {
     let arView = ARView(frame: UIScreen.main.bounds)
     let faceAnchor = AnchorEntity()
 
-    var selectedVirtualContent: MenuItem = .detectFace {
+    var selectedVirtualContent: MenuItem {
         didSet {
+            faceAnchor.removeAllChildren()
             arView.session.run(ARFaceTrackingConfiguration(), options: [.removeExistingAnchors, .resetTracking])
         }
     }
@@ -25,11 +27,18 @@ class ARDetectFaceView: UIView {
         return selectedVirtualContent.makeController()
     }
     
-    override init(frame frameRect: CGRect) {
+    var menuInfo: MenuInfo
+    var menuInfoTask: AnyCancellable?
+    
+    init(frame frameRect: CGRect,_ menuInfo: MenuInfo) {
         // Check if ARBodyTrackingConfiguration is supported
         guard ARBodyTrackingConfiguration.isSupported else {
             fatalError("This feature is only supported on devices with an A12 chip")
         }
+        
+        self.menuInfo = menuInfo
+        self.selectedVirtualContent = self.menuInfo.menuItem
+        
         
         // Init parent Object
         super.init(frame: frameRect)
@@ -47,6 +56,11 @@ class ARDetectFaceView: UIView {
         // Set a Anchor（Objects can be placed on top of the anchor）
         // Place the object when the body is detected
         arView.scene.addAnchor(faceAnchor)
+        
+        // ゲーム情報の受け取りタスク
+        self.menuInfoTask = menuInfo.$menuItem.receive(on: DispatchQueue.main).sink { (value) in
+            self.selectedVirtualContent = value
+        }
         
     }
     

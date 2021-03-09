@@ -12,12 +12,31 @@ class DetectFacePieyonController: NSObject, VirtualContentController {
     
     func updateObject(_ session: ARSession,_ anchors: [ARAnchor],_ parentAnchorEntity : Entity) {
         for anchor in anchors {
-            // Processing is interrupted.
-            // When other than ARFaceAnchor is detected.
-//            guard let detectedAnchor = anchor as? ARFaceAnchor else {return}
-            guard anchor is ARFaceAnchor else {return}
+            guard let faceAnchor = anchor as? ARFaceAnchor
+                else { return }
+            
+            let blendShapes = faceAnchor.blendShapes
+            
+            guard let eyeBlinkLeft = blendShapes[.eyeBlinkLeft] as? Float,
+                let eyeBlinkRight = blendShapes[.eyeBlinkRight] as? Float,
+                let mouthRollUpper = blendShapes[.mouthRollUpper] as? Float,
+                let mouthRollLower = blendShapes[.mouthRollLower] as? Float
+                else { return }
+            
+            print("eyeBlinkLeft:", eyeBlinkLeft)
+            print("eyeBlinkRight:", eyeBlinkRight)
+            print("mouthRollUpper:", mouthRollUpper)
+            print("mouthRollLower:", mouthRollLower)
+            
+            
+//            pieyonObject.eyeLeft
+//            pieyonObject.eyeRight
+//
+//            pieyonObject.mouthRollUpper
+//            pieyonObject.mouthRollLower
             
             parentAnchorEntity.addChild(pieyonObject)
+            
         }
     }
     

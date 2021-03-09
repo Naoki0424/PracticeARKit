@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct MenuView: View {
-
+    @EnvironmentObject var menuInfo: MenuInfo
     var body: some View {
         VStack() {
             List {
                 ForEach(MenuItem.allCases, id: \.hashValue) { item in
-                    Text(item.rawValue)
+                    Button(action: {
+                        menuInfo.menuItem = item
+                     }, label: { Text(item.rawValue)})
                 }
             }
             Spacer()
@@ -24,9 +26,3 @@ struct MenuView: View {
     }
 }
 
-
-struct MenuView_Previews: PreviewProvider {
-    static var previews: some View {
-        MenuView()
-    }
-}
