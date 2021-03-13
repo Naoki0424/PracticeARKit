@@ -20,6 +20,7 @@
 		E488C53325F3412E00DF48A3 /* CommonEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E488C53225F3412E00DF48A3 /* CommonEntity.swift */; };
 		E488C53725F4644900DF48A3 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E488C53625F4644900DF48A3 /* MenuView.swift */; };
 		E488C53C25F4CD4300DF48A3 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E488C53B25F4CD4300DF48A3 /* MenuItem.swift */; };
+		E4C1A7FA25FA5684003DB138 /* DetectFaceMusicNotesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C1A7F925FA5684003DB138 /* DetectFaceMusicNotesController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		E488C53225F3412E00DF48A3 /* CommonEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonEntity.swift; sourceTree = "<group>"; };
 		E488C53625F4644900DF48A3 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		E488C53B25F4CD4300DF48A3 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		E4C1A7F925FA5684003DB138 /* DetectFaceMusicNotesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectFaceMusicNotesController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				E482263E25F66FEB00B9E749 /* DetectFaceController.swift */,
 				E482264525F6761300B9E749 /* DetectFacePieyonController.swift */,
+				E4C1A7F925FA5684003DB138 /* DetectFaceMusicNotesController.swift */,
 			);
 			path = VirtualContentController;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				E488C52B25F3331400DF48A3 /* MyScene.rcproject in Sources */,
 				E488C53325F3412E00DF48A3 /* CommonEntity.swift in Sources */,
 				E430207825F32B45006228BE /* ContentView.swift in Sources */,
+				E4C1A7FA25FA5684003DB138 /* DetectFaceMusicNotesController.swift in Sources */,
 				E488C52F25F3390D00DF48A3 /* CommonFloat.swift in Sources */,
 				E488C53C25F4CD4300DF48A3 /* MenuItem.swift in Sources */,
 				E482264625F6761300B9E749 /* DetectFacePieyonController.swift in Sources */,

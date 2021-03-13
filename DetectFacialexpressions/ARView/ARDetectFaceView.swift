@@ -57,7 +57,6 @@ class ARDetectFaceView: UIView {
         // Place the object when the body is detected
         arView.scene.addAnchor(faceAnchor)
         
-        // ゲーム情報の受け取りタスク
         self.menuInfoTask = menuInfo.$menuItem.receive(on: DispatchQueue.main).sink { (value) in
             self.selectedVirtualContent = value
         }

@@ -11,7 +11,7 @@ import RealityKit
 enum MenuItem: String, CaseIterable {
     case detectFace = "顔検出"
     case pieyon = "ピエよん"
-    case test2 = "test2"
+    case musicNotes = "音符"
     case test3 = "test3"
     case test4 = "test4"
     
@@ -21,8 +21,8 @@ enum MenuItem: String, CaseIterable {
             return DetectFaceController()
         case .pieyon:
             return DetectFacePieyonController()
-        case .test2:
-            return DetectFaceController()
+        case .musicNotes:
+            return DetectFaceMusicNotesController()
         case .test3:
             return DetectFaceController()
         case .test4:

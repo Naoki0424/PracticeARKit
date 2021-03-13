@@ -12,3 +12,5 @@ let defaultFaceObject = try! MyScene.loadFaceDefault()
 let faceTongueObject = try! MyScene.loadFaceTongue()
 
 let pieyonObject = try! MyScene.loadPieyon()
+
+let musicNotesObject = try! MyScene.loadMusicNotes()

@@ -18,6 +18,7 @@ struct MenuView: View {
                      }, label: { Text(item.rawValue)})
                 }
             }
+            .opacity(0.8) 
             Spacer()
             Text("Menu")
         }

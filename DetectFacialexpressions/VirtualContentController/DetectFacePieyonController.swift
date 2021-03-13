@@ -42,11 +42,4 @@ class DetectFacePieyonController: NSObject, VirtualContentController {
             
         }
     }
-    
-    func addObject(_ entity: Entity, _ parentAnchorEntity: Entity) {
-        parentAnchorEntity.removeAllChildren()
-        if parentAnchorEntity.children.count == 0 {
-            parentAnchorEntity.addChild(entity)
-        }
-    }
 }
