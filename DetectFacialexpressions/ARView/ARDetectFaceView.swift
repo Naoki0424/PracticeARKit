@@ -15,12 +15,13 @@ class ARDetectFaceView: UIView {
     // MARK: Properties
     
     let arView = ARView(frame: UIScreen.main.bounds)
-    let faceAnchor = AnchorEntity()
+    let sceneAnchor = AnchorEntity()
 
     var selectedVirtualContent: MenuItem {
         didSet {
-            faceAnchor.removeAllChildren()
+            sceneAnchor.removeAllChildren()
             arView.session.run(ARFaceTrackingConfiguration(), options: [.removeExistingAnchors, .resetTracking])
+//            setupARConfiguration(selectedVirtualContent)
         }
     }
     var selectedContentController: VirtualContentController {
@@ -46,16 +47,15 @@ class ARDetectFaceView: UIView {
         // Register a delegate
         arView.session.delegate = self
         
+        // 下に何か出る
+//        arView.debugOptions = [.showStatistics]
+        
         // Add a ARView
         addSubview(arView)
         
-        let configuration = ARFaceTrackingConfiguration()
-        configuration.isLightEstimationEnabled = true
-        arView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
-        
         // Set a Anchor（Objects can be placed on top of the anchor）
         // Place the object when the body is detected
-        arView.scene.addAnchor(faceAnchor)
+        arView.scene.addAnchor(sceneAnchor)
         
         self.menuInfoTask = menuInfo.$menuItem.receive(on: DispatchQueue.main).sink { (value) in
             self.selectedVirtualContent = value
@@ -66,12 +66,17 @@ class ARDetectFaceView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK:- Configuration
+    func setupARConfiguration(_ menuItem: MenuItem) {
+        menuItem.initARConfiguration(arView)
+    }
 }
 
 //MARK:- Session
 
 extension ARDetectFaceView: ARSessionDelegate{
     func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
-        selectedContentController.updateObject(session, anchors, faceAnchor)
+        selectedContentController.updateObject(session, anchors, sceneAnchor)
     }
 }

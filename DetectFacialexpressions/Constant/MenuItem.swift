@@ -9,11 +9,11 @@ import ARKit
 import RealityKit
 
 enum MenuItem: String, CaseIterable {
-    case detectFace = "顔検出"
+    case detectFace = "吹き出し"
     case pieyon = "ピエよん"
     case musicNotes = "音符"
-    case test3 = "test3"
-    case test4 = "test4"
+//    case detectTorysImage = "TORYS検出"
+//    case test4 = "test4"
     
     func makeController() -> VirtualContentController {
         switch self {
@@ -23,12 +23,45 @@ enum MenuItem: String, CaseIterable {
             return DetectFacePieyonController()
         case .musicNotes:
             return DetectFaceMusicNotesController()
-        case .test3:
-            return DetectFaceController()
-        case .test4:
-            return DetectFaceController()
+//        case .detectTorysImage:
+//            return DetectTorysController()
+//        case .test4:
+//            return DetectFaceController()
         }
     }
+    
+    func initARConfiguration(_ arView: ARView) {
+        switch self {
+        case .detectFace:
+            initARFaceTrackingConfiguration(arView)
+        case .pieyon:
+            initARFaceTrackingConfiguration(arView)
+        case .musicNotes:
+            initARFaceTrackingConfiguration(arView)
+//        case .detectTorysImage:
+//            initARImageTrackingConfiguration(arView)
+//        default:
+//            initARFaceTrackingConfiguration(arView)
+        }
+    }
+    
+    func initARFaceTrackingConfiguration(_ arView: ARView) {
+        let configuration = ARFaceTrackingConfiguration()
+        configuration.isLightEstimationEnabled = true
+        arView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+    }
+    
+    func initARImageTrackingConfiguration(_ arView: ARView) {
+        let configuration = ARImageTrackingConfiguration()
+        
+        guard let referenceImages = ARReferenceImage.referenceImages(inGroupNamed: "AR Resources", bundle: nil) else { fatalError("Missing expected asset catalog resources.") }
+        
+        configuration.maximumNumberOfTrackedImages = 1
+        configuration.trackingImages = referenceImages
+        
+        arView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+    }
+    
 }
 
 protocol VirtualContentController{

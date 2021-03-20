@@ -26,6 +26,20 @@ struct ContentView: View {
                 // メインコンテンツ
                 ARViewContainer(menuInfo: self.menuInfo)
                     .edgesIgnoringSafeArea(.all)
+                
+                if self.menuInfo.menuItem == .musicNotes {
+                    Rectangle().foregroundColor(self.color).opacity(self.isAnimation ? 0 : 0.3)
+                        .onAppear() {
+                            withAnimation(
+                                Animation
+                                    .linear(duration: 0.5)
+                                    .repeatForever(autoreverses: true)
+                            ) {
+                                self.color = getColor() // ←なぜか切り替わらない
+                                self.isAnimation.toggle()
+                            }
+                        }
+                }
                 // スライドメニュー
                 MenuView()
                     .background(Color.white)
@@ -43,6 +57,7 @@ struct ContentView: View {
                     .offset(y: self.offset)
                     // スライドのアニメーションを設定します
                     .animation(.default)
+                
             }
             // ジェスチャーに関する実装をします
             // スワイプのしきい値を設定してユーザの思わぬメニューの出現を防ぎます
@@ -65,20 +80,6 @@ struct ContentView: View {
                             }
                         }
             )
-            
-            if self.menuInfo.menuItem == .musicNotes {
-                Rectangle().foregroundColor(self.color).opacity(self.isAnimation ? 0 : 0.3)
-                    .onAppear() {
-                        withAnimation(
-                            Animation
-                                .linear(duration: 0.5)
-                                .repeatForever(autoreverses: true)
-                        ) {
-                            self.color = getColor() // ←なぜか切り替わらない
-                            self.isAnimation.toggle()
-                        }
-                    }
-            }
 
         }
     }
@@ -96,7 +97,7 @@ struct ContentView: View {
 func getColor() -> Color {
     let num = Int.random(in: 1...5)
     if num == 1 {
-        return .black
+        return .pink
     }else if num == 2 {
         return .yellow
     }else if num == 3 {

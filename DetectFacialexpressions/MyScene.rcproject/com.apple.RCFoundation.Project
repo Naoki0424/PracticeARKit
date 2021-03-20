@@ -98,21 +98,14 @@
               "material" : "concrete",
               "overrides" : {
                 "children" : {
-                  "93C04B1E-050C-46CC-A2E0-5FA611780C00" : {
+                  "60D2721C-0262-4654-92E7-4F9DB6902E54" : {
                     "overrides" : {
                       "arguments" : [
                         [
-                          "arrowParam",
+                          "arrowAngleOffset",
                           {
                             "typeName" : "Double",
-                            "value" : 0.8573179290254237
-                          }
-                        ],
-                        [
-                          "bubbleMaterial",
-                          {
-                            "typeName" : "String",
-                            "value" : "standard"
+                            "value" : -16
                           }
                         ],
                         [
@@ -138,14 +131,14 @@
                           "message",
                           {
                             "typeName" : "String",
-                            "value" : "こんにちは!"
+                            "value" : "こんにちは"
                           }
                         ],
                         [
                           "messageFont",
                           {
                             "typeName" : "String",
-                            "value" : "Helvetica-BoldOblique"
+                            "value" : "Helvetica"
                           }
                         ],
                         [
@@ -160,18 +153,11 @@
                           {
                             "typeName" : "double4",
                             "value" : [
-                              0.05000000074505806,
                               0.25,
+                              0.05000000074505806,
                               0.05000000074505806,
                               1
                             ]
-                          }
-                        ],
-                        [
-                          "messageScale",
-                          {
-                            "typeName" : "Double",
-                            "value" : 0.80460556806144079
                           }
                         ]
                       ],
@@ -184,7 +170,7 @@
                                 "RuntimeIdentifier",
                                 {
                                   "typeName" : "UUID",
-                                  "value" : "50B99362-BB34-4D03-AD0C-5B8FBA18E43E"
+                                  "value" : "A9F68943-3406-439B-834C-1C03061FDC95"
                                 }
                               ]
                             ]
@@ -200,32 +186,33 @@
                           "RuntimeIdentifier",
                           {
                             "typeName" : "UUID",
-                            "value" : "66ADB9CA-01A1-4329-9FDD-0DBDA9CF0416"
+                            "value" : "42850E73-26C4-4538-B0C3-62E6F62DD319"
                           }
                         ]
                       ]
                     },
                     "transform" : {
                       "matrix" : [
-                        0.39304044842720032,
-                        -1.5294947530719583e-09,
-                        4.1704751652105188e-07,
+                        0.3776782751083374,
+                        -9.0045418232875818e-08,
+                        -4.5022801486993558e-08,
                         0,
-                        4.1704760178618017e-07,
-                        9.0896901383530349e-06,
-                        -0.39304041862487793,
+                        -4.5022243710945986e-08,
+                        1.1480732382551651e-06,
+                        -0.37767595052719116,
                         0,
-                        1.5198654557124769e-09,
-                        0.39304041862487793,
-                        9.0896901383530349e-06,
+                        9.0045006118089077e-08,
+                        0.37767595052719116,
+                        1.1480732382551651e-06,
                         0,
-                        0.12345483154058456,
-                        0.0060231657698750496,
-                        -0.14384552836418152,
+                        0.10648195445537567,
+                        0.0037770187482237816,
+                        -0.14413455128669739,
                         1
                       ]
                     }
-                  }
+                  },
+                  "93C04B1E-050C-46CC-A2E0-5FA611780C00" : null
                 },
                 "factory" : null,
                 "runtimeAttributes" : [
@@ -465,232 +452,6 @@
                   0,
                   0,
                   -1,
-                  0,
-                  0,
-                  0,
-                  0,
-                  0,
-                  1
-                ]
-              }
-            }
-          ],
-          "__version" : 5
-        },
-        {
-          "__content" : [
-            {
-              "arAnchorSpecification" : {
-                "name" : "face"
-              },
-              "behaviors" : [
-                {
-                  "__content" : [
-                    {
-                      "accessibility" : {
-                        "__content" : [
-                          {
-                            "isEnabled" : false
-                          }
-                        ],
-                        "__version" : 1
-                      },
-                      "actionGroups" : [
-                        {
-                          "__content" : [
-                            {
-                              "configurations" : [
-                                {
-                                  "__content" : [
-                                    {
-                                      "configurationBox" : {
-                                        "configuration" : {
-                                          "axis" : [
-                                            0,
-                                            0,
-                                            1
-                                          ],
-                                          "direction" : "clockwise",
-                                          "duration" : 1,
-                                          "iterations" : 9,
-                                          "target" : [
-                                            "A42C148D-6F15-432D-AE07-5C928E2FD448"
-                                          ]
-                                        },
-                                        "name" : {
-                                          "type" : "spin"
-                                        }
-                                      },
-                                      "identifier" : "8517F088-6610-497C-8698-CFE10ACB8319",
-                                      "isEnabled" : true
-                                    }
-                                  ],
-                                  "__version" : 1
-                                }
-                              ],
-                              "identifier" : "1E07B1FB-50E5-4F8F-9EBC-09EE1491A52E",
-                              "isEnabled" : true
-                            }
-                          ],
-                          "__version" : 1
-                        }
-                      ],
-                      "color" : [
-                        0.364705890417099,
-                        0.74117648601531982,
-                        0.69019609689712524,
-                        1
-                      ],
-                      "identifier" : "C8633EA8-7220-4F4A-B0EE-90837C9DD545",
-                      "isEnabled" : true,
-                      "isLooping" : true,
-                      "isModal" : false,
-                      "name" : "ビヘイビア",
-                      "triggers" : [
-                        {
-                          "__content" : [
-                            {
-                              "configurationBox" : {
-                                "configuration" : {
-
-                                },
-                                "name" : "start"
-                              },
-                              "identifier" : "176126C6-0CBA-4938-BEE2-C96D0CE79117",
-                              "isEnabled" : true
-                            }
-                          ],
-                          "__version" : 1
-                        }
-                      ]
-                    }
-                  ],
-                  "__version" : 3
-                }
-              ],
-              "gravity" : [
-                0,
-                0,
-                9.8000001907348633
-              ],
-              "identifier" : "A242E3DB-289A-4EE8-9E52-2BE299DC9441",
-              "material" : "concrete",
-              "overrides" : {
-                "children" : {
-                  "0B18C7E6-48C7-4F8E-B000-7F24A16FECEF" : {
-                    "overrides" : {
-                      "arguments" : [
-                        [
-                          "item",
-                          {
-                            "typeName" : "String",
-                            "value" : "Space Shuttle"
-                          }
-                        ],
-                        [
-                          "style",
-                          {
-                            "typeName" : "String",
-                            "value" : "Stylized"
-                          }
-                        ]
-                      ],
-                      "children" : {
-                        "item" : {
-                          "overrides" : {
-                            "factory" : null,
-                            "runtimeAttributes" : [
-                              [
-                                "RuntimeIdentifier",
-                                {
-                                  "typeName" : "UUID",
-                                  "value" : "B52EEA2E-D550-43A5-804C-87D12312FC61"
-                                }
-                              ]
-                            ]
-                          }
-                        }
-                      },
-                      "factory" : {
-                        "identifier" : "com.apple.rc.af.SpaceShuttle.5554308e-2cc9-42b0-9f94-0ec5849b5a22",
-                        "version" : "1.0"
-                      },
-                      "runtimeAttributes" : [
-                        [
-                          "RuntimeIdentifier",
-                          {
-                            "typeName" : "UUID",
-                            "value" : "A42C148D-6F15-432D-AE07-5C928E2FD448"
-                          }
-                        ]
-                      ]
-                    },
-                    "transform" : {
-                      "matrix" : [
-                        -0.34686923027038574,
-                        -1.9288566299735521e-09,
-                        0.010786929167807102,
-                        0,
-                        1.9288575181519718e-09,
-                        0.34703695774078369,
-                        1.2408035843236576e-07,
-                        0,
-                        -0.010786929167807102,
-                        1.2408035843236576e-07,
-                        -0.34686923027038574,
-                        0,
-                        -0.00023990870977286249,
-                        0.14124785363674164,
-                        0.043139096349477768,
-                        1
-                      ]
-                    }
-                  },
-                  "636F332B-37FC-4B14-85E6-74ECA83EEF8D" : null
-                },
-                "factory" : null,
-                "runtimeAttributes" : [
-                  [
-                    "isAccessibilityEnabled",
-                    {
-                      "typeName" : "Bool",
-                      "value" : false
-                    }
-                  ]
-                ]
-              },
-              "physicsMode" : "grid",
-              "title" : "test",
-              "viewTransform" : {
-                "cameraTransform" : [
-                  0.99907124042510986,
-                  -3.7834979593753815e-09,
-                  -0.043088257312774658,
-                  0,
-                  -0.0089032640680670738,
-                  0.97841948270797729,
-                  -0.20643669366836548,
-                  0,
-                  0.04215843603014946,
-                  0.2066284716129303,
-                  0.97751075029373169,
-                  0,
-                  -0.051709350198507309,
-                  0.010456092655658722,
-                  0.90517479181289673,
-                  1
-                ],
-                "sceneTransform" : [
-                  1,
-                  0,
-                  0,
-                  0,
-                  0,
-                  0,
-                  0.99999994039535522,
-                  0,
-                  0,
-                  -0.99999994039535522,
                   0,
                   0,
                   0,
@@ -3373,6 +3134,258 @@
                   0,
                   -0.99999994039535522,
                   0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              }
+            }
+          ],
+          "__version" : 5
+        },
+        {
+          "__content" : [
+            {
+              "arAnchorSpecification" : {
+                "name" : "face"
+              },
+              "behaviors" : [
+
+              ],
+              "gravity" : [
+                0,
+                0,
+                9.8000001907348633
+              ],
+              "identifier" : "DBC208FC-228B-440A-95F4-AD5519AD4FA4",
+              "material" : "concrete",
+              "overrides" : {
+                "factory" : null,
+                "runtimeAttributes" : [
+                  [
+                    "isAccessibilityEnabled",
+                    {
+                      "typeName" : "Bool",
+                      "value" : false
+                    }
+                  ]
+                ]
+              },
+              "physicsMode" : "grid",
+              "title" : "MisatoUgaki001",
+              "viewTransform" : {
+                "cameraTransform" : [
+                  0.99984055757522583,
+                  -1.8696253434313803e-08,
+                  -0.017856277525424957,
+                  0,
+                  1.8671936885539253e-08,
+                  0.99999994039535522,
+                  -1.5283730947501795e-09,
+                  0,
+                  0.017856277525424957,
+                  1.1947183242710935e-09,
+                  0.99984055757522583,
+                  0,
+                  0.047717217355966568,
+                  9.6700722329899147e-20,
+                  0.58295547962188721,
+                  1
+                ],
+                "sceneTransform" : [
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0.99999994039535522,
+                  0,
+                  0,
+                  -0.99999994039535522,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              }
+            }
+          ],
+          "__version" : 5
+        },
+        {
+          "__content" : [
+            {
+              "arAnchorSpecification" : {
+                "name" : "image",
+                "physicalWidth" : 0.74577218294143677,
+                "url" : "image:ba1ec1084ac9f26613262ab7394444ed\/TORYS.jpeg"
+              },
+              "behaviors" : [
+
+              ],
+              "gravity" : [
+                0,
+                -9.8000001907348633,
+                0
+              ],
+              "identifier" : "6726BE2E-C40D-4ED9-A036-3008928D28E4",
+              "material" : "concrete",
+              "overrides" : {
+                "children" : {
+                  "47A10ECF-8FF7-4CF5-9525-47ED087B4343" : {
+                    "overrides" : {
+                      "arguments" : [
+                        [
+                          "arrowAngleOffset",
+                          {
+                            "typeName" : "Double",
+                            "value" : -16
+                          }
+                        ],
+                        [
+                          "arrowLength",
+                          {
+                            "typeName" : "Double",
+                            "value" : 0.28000000000000003
+                          }
+                        ],
+                        [
+                          "arrowWidth",
+                          {
+                            "typeName" : "Double",
+                            "value" : 0.17000000000000001
+                          }
+                        ],
+                        [
+                          "bubbleType",
+                          {
+                            "typeName" : "String",
+                            "value" : "thought"
+                          }
+                        ],
+                        [
+                          "message",
+                          {
+                            "typeName" : "String",
+                            "value" : "Aa"
+                          }
+                        ],
+                        [
+                          "messageFont",
+                          {
+                            "typeName" : "String",
+                            "value" : "Helvetica"
+                          }
+                        ],
+                        [
+                          "messageMaterial",
+                          {
+                            "typeName" : "String",
+                            "value" : "standard"
+                          }
+                        ]
+                      ],
+                      "children" : {
+                        "text_1" : {
+                          "overrides" : {
+                            "factory" : null,
+                            "runtimeAttributes" : [
+                              [
+                                "RuntimeIdentifier",
+                                {
+                                  "typeName" : "UUID",
+                                  "value" : "893E2F39-FE18-495A-942D-B0164FAC4F45"
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      },
+                      "factory" : {
+                        "identifier" : "com.apple.rc.af.CoreAssetFactories.QuoteBubbleAssetFactory",
+                        "version" : "1.0"
+                      },
+                      "runtimeAttributes" : [
+                        [
+                          "RuntimeIdentifier",
+                          {
+                            "typeName" : "UUID",
+                            "value" : "0135A7A4-4881-4D4F-8344-1FDF16D884C5"
+                          }
+                        ]
+                      ]
+                    },
+                    "transform" : {
+                      "matrix" : [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0.27250954508781433,
+                        0.16378591954708099,
+                        2.8421685713481484e-14,
+                        1
+                      ]
+                    }
+                  }
+                },
+                "factory" : null,
+                "runtimeAttributes" : [
+                  [
+                    "isAccessibilityEnabled",
+                    {
+                      "typeName" : "Bool",
+                      "value" : false
+                    }
+                  ]
+                ]
+              },
+              "physicsMode" : "grid",
+              "title" : "Image",
+              "viewTransform" : {
+                "cameraTransform" : [
+                  0.99984055757522583,
+                  -1.909211277961731e-08,
+                  -0.017856273800134659,
+                  0,
+                  -0.0082210144028067589,
+                  0.88771146535873413,
+                  -0.46032679080963135,
+                  0,
+                  0.015851227566599846,
+                  0.46040022373199463,
+                  0.88756990432739258,
+                  0,
+                  0.18992884457111359,
+                  0.83740991353988647,
+                  1.4379459619522095,
+                  1
+                ],
+                "sceneTransform" : [
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0.99999994039535522,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0.99999994039535522,
                   0,
                   0,
                   0,
